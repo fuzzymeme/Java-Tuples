@@ -85,5 +85,15 @@ public class EnumTupleTests {
 		
 		assertTrue(tuple.containsKey(Key.TOM));
 		assertTrue(tuple.containsKey(Key.HARRY));
+		assertEquals(2, tuple.keySet().size());
 	}
+	
+	@Test
+	public void test_SettingTypleFromConstuctor() {
+		EnumTuple<Key, String> tuple = new EnumTuple<>(Key.TOM, "cat");		
+		
+		assertEquals("cat", tuple.get(Key.TOM));
+		assertEquals(1, tuple.keySet().size());
+	}
+
 }

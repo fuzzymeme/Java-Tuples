@@ -7,6 +7,12 @@ import java.util.Set;
 public class EnumTuple<K extends EnumTupleKey, T> {
 		
 	private Map<K, T> pairs = new HashMap<>();
+	
+	public EnumTuple() {}
+	
+	public EnumTuple(K key, T value) {
+		pairs.put(key, value);
+	}
 
 	public void set(K key, T value) {
 		pairs.put(key, value);
@@ -26,6 +32,10 @@ public class EnumTuple<K extends EnumTupleKey, T> {
 	
 	public boolean containsKey(K key) {
 		return pairs.containsKey(key);
+	}
+	
+	public int size() {
+		return pairs.size();
 	}
 	
 }

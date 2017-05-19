@@ -6,7 +6,7 @@ import java.awt.Color;
 
 import org.junit.Test;
 
-public class SImpleTupleTests {
+public class SimpleTupleTests {
 
 	@Test
 	public void test_SimpleSetting() {
